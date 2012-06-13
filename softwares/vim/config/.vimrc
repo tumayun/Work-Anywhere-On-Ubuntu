@@ -105,7 +105,7 @@ vnoremap " <ESC>i"<ESC>gvo<ESC>i"<ESC>
 vnoremap ' <ESC>i'<ESC>gvo<ESC>i'<ESC>
 
 " Plugin: NERDTree
-noremap <F2> :NERDTreeToggle<CR>
+noremap <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 let g:NERDTreeWinPos = "right"
 
 " Plugin: Rails
@@ -119,3 +119,8 @@ let g:path_to_search_app = "/usr/bin/ack-grep"
 let g:vimim_cloud = 'sogou'
 
 iabbrev func function
+
+autocmd! BufRead,BufNewFile *.less set filetype=less
+
+" open NERDTree if start as a blank file
+autocmd vimenter * if !argc() | NERDTree | endif
