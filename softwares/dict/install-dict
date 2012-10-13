@@ -3,7 +3,7 @@
 #cp $path/dict ~/cmd/dict
 tmp=tmp/softwares/dict
 mkdir -p $tmp
-git clone pnqcc@pnq.cc:projects/dict $tmp
+git clone git://github.com/qhwa/Command-Line-Youdao-Dictionary.git $tmp
 cp $tmp/dict ~/cmd/dict
 chmod a+x ~/cmd/dict
 rm -rf $tmp

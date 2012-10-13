@@ -1,6 +1,12 @@
 #!/bin/bash
 function install_ruby(){
-  sudo apt-get install ruby1.9.1-dev
+  install_rvm
+  rvm install 1.9.3
+  rvm use 1.9.3 --default
+}
+
+function install_rvm(){
+  which rvm || (curl -L https://get.rvm.io | bash -s stable --ruby && source $HOME/.rvm/scripts/rvm)
 }
 
 install_ruby

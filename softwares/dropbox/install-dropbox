@@ -4,24 +4,16 @@ function add_dropbox_host(){
     cp /etc/hosts hosts
     cat $path/dropbox.host >> hosts
     sudo cp hosts /etc/hosts
+    rm -f hosts
 }
 
 function install_dropbox(){
-    tmp=tmp/softwares
-    mkdir -p $tmp
-    cd $tmp
-    wget -c http://linux.dropbox.com/packages/nautilus-dropbox-0.6.9.tar.bz2
-    tar -xjf nautilus-dropbox*.tar.bz2
-    cd nautilus-dropbox*
-
-    sudo apt-get install -y libnautilus-extension-dev python-docutils
-    ./configure && make && sudo make install
-    sudo apt-get remove libnautilus-extension-dev -y
-    sudo apt-get autoremove -y
+    sudo dpkg -i 'https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.4.0_i386.deb'
 }
 
 function start_dropbox(){
     dropbox start -i
 }
+
 grep '## dropbox ##' /etc/hosts > /dev/null || add_dropbox_host
 install_dropbox && start_dropbox
