@@ -1,8 +1,13 @@
 #!/bin/bash
 function install_ruby(){
+  prepair_lib
   install_rvm
   rvm install 1.9.3
   rvm use 1.9.3 --default
+}
+
+function prepair_lib(){
+  sudo apt-get install bison autoconf2.13 zlib1g-dev
 }
 
 function install_rvm(){
