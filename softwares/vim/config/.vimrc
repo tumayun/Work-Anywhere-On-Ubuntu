@@ -66,7 +66,7 @@ nnoremap  <silent> cu :call UnCommentLine()<CR>
 vnoremap <silent> cu :call RangeUnCommentLine()<CR>
 
 au FileType ruby nnoremap <buffer> <leader>r :!ruby "%"<CR>
-au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au FileType ruby,jade setlocal tabstop=2 softtabstop=2 shiftwidth=2
 au FileType vim nnoremap <buffer> <leader>r :so %<CR>
 au FileType sh  nnoremap <buffer> <leader>r :!sh "%"<CR>
 
@@ -142,3 +142,5 @@ Bundle 'snipmate-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'digitaltoad/vim-jade'
+
+filetype on
