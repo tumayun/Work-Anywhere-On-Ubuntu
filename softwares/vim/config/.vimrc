@@ -124,3 +124,21 @@ autocmd! BufRead,BufNewFile *.less set filetype=less
 
 " open NERDTree if start as a blank file
 autocmd vimenter * if !argc() | NERDTree | endif
+
+
+" vundle configs
+filetype off                   " required!
+
+set rtp+=~/.vim_runtime/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-rails'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'snipmate-snippets'
+Bundle 'godlygeek/tabular'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'digitaltoad/vim-jade'

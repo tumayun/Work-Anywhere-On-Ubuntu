@@ -7,12 +7,7 @@ function install_vim(){
     install_gvim
     install_fonts
     copy_configs
-    install_plugin_rails
-    install_plugin_markdown
-    install_plugin_jslint
-    install_plugin_snipmate
-    install_plugin_tabular
-    install_plugin_powerline
+    install_plugin_vundle
     add_alias
     clean
 }
@@ -26,39 +21,9 @@ function install_fonts(){
 }
 
 ## config plugins
-function install_plugin_rails(){
-    path="tmp/softwares/vim-rails"
-    [ -d "$path" ] || git clone https://github.com/tpope/vim-rails.git $path
-    cp -a $path/* $VIMFILES/
-}
-
-function install_plugin_markdown(){
-    path="tmp/softwares/vim-markdown"
-    [ -d "$path" ] || git clone https://github.com/plasticboy/vim-markdown.git $path
-    cp -a $path/* $VIMFILES/
-}
-
-function install_plugin_jslint(){
-    path="tmp/softwares/vim-jslint"
-    [ -d "$path" ] || git clone git://github.com/hallettj/jslint.vim.git $path
-    cd $path && rake install > /dev/null && cd -
-}
-
-function install_plugin_snipmate(){
-    path="tmp/softwares/vim-snippets"
-    [ -d "$path" ] || git clone https://github.com/qhwa/snipmate-snippets.git $path
-    cp -a $path/snippets $VIMFILES/
-}
-
-function install_plugin_tabular(){
-    path="tmp/softwares/vim-tabular"
-    [ -d "$path" ] || git clone git://github.com/godlygeek/tabular.git $path
-    cp -a $path/* $VIMFILES/
-}
-
-function install_plugin_powerline(){
-    path="tmp/softwares/vim-powerline"
-    [ -d "$path" ] || git clone git://github.com/Lokaltog/vim-powerline.git $path
+function install_plugin_vundle(){
+    path="tmp/softwares/vim-vundle"
+    [ -d "$path" ] || git clone git://github.com/gmarik/vundle.git $path
     cp -a $path/* $VIMFILES/
 }
 
