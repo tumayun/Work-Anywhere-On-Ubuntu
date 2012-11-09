@@ -2,3 +2,5 @@
 alias uedstyle='ssh uedstyle@uedstyle'
 alias ued66='ssh ued66@ued66'
 alias ued65='ssh ued65@ued65'
+alias hst='sudo vim /etc/hosts'
+alias gvim='gvim -f'
