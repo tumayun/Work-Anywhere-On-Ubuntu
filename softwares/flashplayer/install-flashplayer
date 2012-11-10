@@ -1,0 +1,28 @@
+#!/bin/bash
+function install_flashplayer(){
+    prepare_libs
+    install_plugin
+    install_standalone_flashplayer
+}
+
+function prepare_libs(){
+    sudo apt-get install ia32-libs -y
+}
+
+function install_plugin() {
+    mkdir -p tmp ; cd tmp
+    wget -c http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_plugin_debug.i386.tar.gz \
+    -O flashplayer.tar.gz
+    tar xzf flashplayer.tar.gz
+    cp lib*.so $HOME/.mozilla/plugins/
+}
+
+function install_standalone_flashplayer() {
+    wget -c http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_sa.i386.tar.gz \
+        -O flashplayer.sa.tar.gz
+    tar xzf flashplayer.sa.tar.gz
+    mkdir -p $HOME/bin
+    cp install_flash_player_linux_sa/flashplayer $HOME/bin
+}
+
+install_flashplayer
