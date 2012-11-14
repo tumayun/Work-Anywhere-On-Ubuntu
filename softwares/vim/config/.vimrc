@@ -142,5 +142,6 @@ Bundle 'snipmate-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
 
 filetype on
