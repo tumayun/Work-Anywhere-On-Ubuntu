@@ -145,5 +145,6 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 
 filetype on
