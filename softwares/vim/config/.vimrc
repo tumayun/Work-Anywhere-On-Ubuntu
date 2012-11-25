@@ -144,5 +144,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
+Bundle 'kien/ctrlp.vim'
 
 filetype on
