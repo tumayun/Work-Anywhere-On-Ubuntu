@@ -129,7 +129,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 " vundle configs
 filetype off                   " required!
 
-set rtp+=~/.vim_runtime/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -137,6 +137,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-rails'
+Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'snipmate-snippets'
 Bundle 'godlygeek/tabular'
@@ -146,5 +147,7 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-dispatch'
 
 filetype on
