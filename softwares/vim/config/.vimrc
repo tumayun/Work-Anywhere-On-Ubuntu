@@ -66,7 +66,7 @@ nnoremap  <silent> cu :call UnCommentLine()<CR>
 vnoremap <silent> cu :call RangeUnCommentLine()<CR>
 
 au FileType ruby nnoremap <buffer> <leader>r :!ruby "%"<CR>
-au FileType ruby,jade setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au FileType ruby,jade,coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
 au FileType vim nnoremap <buffer> <leader>r :so %<CR>
 au FileType sh  nnoremap <buffer> <leader>r :!sh "%"<CR>
 
@@ -145,9 +145,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-dispatch'
+Bundle "sudar/vim-arduino-syntax"
 
 filetype on
