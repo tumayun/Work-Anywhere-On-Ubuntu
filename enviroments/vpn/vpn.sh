@@ -1,7 +1,8 @@
 #!/bin/bash
-vpn_host=vpn.alibaba-inc.com #VPN服务器
-user=hua.qiuh #用户名
-key=123457z #密码中不变的部分
+# 警告：这个文件修改后不要提交，以免泄漏密码!!
+vpn_host=YOUR_VPN_SERVER #VPN服务器
+user=USER_NAME #用户名
+key=YOUR_STATIC_PASSWORD #密码中不变的部分
 
 sudo whoami > /dev/null
 read -s -p "Enter dynamic digital password: " passwd 
