@@ -66,9 +66,10 @@ nnoremap  <silent> cu :call UnCommentLine()<CR>
 vnoremap <silent> cu :call RangeUnCommentLine()<CR>
 
 au FileType ruby nnoremap <buffer> <leader>r :!ruby "%"<CR>
-au FileType ruby,jade,coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au FileType ruby,jade,coffee,arduino setlocal tabstop=2 softtabstop=2 shiftwidth=2
 au FileType vim nnoremap <buffer> <leader>r :so %<CR>
 au FileType sh  nnoremap <buffer> <leader>r :!sh "%"<CR>
+au FileType arduino  nnoremap <buffer> <leader>r :!make && make upload<CR>
 
 " key-mappings for <Alt-[hjkl]> moving cursor in insert mode
 inoremap <M-l> <RIGHT>
@@ -143,10 +144,12 @@ Bundle 'snipmate-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'bbommarito/vim-slim'
+Bundle 'slim-template/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-dispatch'
-Bundle "sudar/vim-arduino-syntax"
+Bundle 'sudar/vim-arduino-syntax'
+Bundle 'tclem/vim-arduino'
+Bundle 'hsanson/vim-android'
 
 filetype on
